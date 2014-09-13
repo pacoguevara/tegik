@@ -25,6 +25,7 @@
 				  <th>Created at</th>
 				  <th>Updated at</th>
 				  <th>Actions</th>
+				  <tbody id="table_body">
 				  <?php 
 				  if(isset($products)):
 				  	foreach ($products as $product): ?>
@@ -41,6 +42,7 @@
 			  <?php endforeach;
 				  endif;
 				  ?>
+				  </tbody>
 				</table>
 			</div>
 		</section>
@@ -107,6 +109,7 @@
 	<script src="<?php echo base_url();?>/assets/bootstrap.js"></script>
 	<script type="text/javascript">
 		$(function(){
+
 			$('#saveChanges').click(function(){
 				var name = $('#inputName').val();
 				var price = $('#inputPrice').val();
@@ -116,8 +119,26 @@
 				$.post("<?php echo base_url();?>/index.php/product/newProduct/", {product_name: name, product_price: price, product_category: category, product_store: store})
 				.done(function(data) {
 				    alert("Tu reseña fue enviada con éxito!");
+				    data = JSON.parse(data);
+					console.log(data);
+				    $('#table_body').empty();
+				    for(var i = 0; i < data.length; i++){
+				    	$('#table_body').append('\
+				    		<tr>\
+				    			<td>'+data[i].id+'</td>\
+				    			<td>'+data[i].name+'</td>\
+				    			<td>'+data[i].price+'</td>\
+				    			<td>'+data[i].category_name+'</td>\
+				    			<td>'+data[i].store_name+'</td>\
+				    			<td>'+data[i].created_at+'</td>\
+				    			<td>'+data[i].store_name+'</td>\
+				    			<td><button class="btn btn-info">Edit</button><button class="btn btn-danger">Delete</button></td>\
+				    		</tr>');
+				    }
+				    
 				});
 			});
+
 		});
 	</script>
 </body>

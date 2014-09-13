@@ -13,6 +13,18 @@ class Product extends CI_Controller {
 
 		$this->product_model->insert_product($name, $price, $category, $store);
 
+		$data = $this->product_model->getProducts();
+
+		echo json_encode($data);
+
+	}
+
+	public function getProducts(){
+		$this->load->model('product_model');
+		$data['products'] = $this->product_model->getProducts();
+
+		echo json_encode($data);
+		//echo "Something";
 	}
 
 }
