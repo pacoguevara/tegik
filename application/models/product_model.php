@@ -28,6 +28,31 @@ class Product_model extends CI_Model {
 			return $q->result();
 	}
 
+	public function deleteProduct($idProduct){
+		$this->db->where('id', $idProduct);
+		$this->db->delete('product');
+	}
+
+	public function getProductById($id){
+		$this->db->where('id', $id);
+		$q = $this->db->get('product');
+
+		if($q->num_rows() > 0)
+			return $q->result();
+	}
+
+	public function updateProduct($id, $name, $price, $category, $store, $update){
+		$object = array (
+			'name' => $name,
+			'price' => $price,
+			'category_id' => $category,
+			'store_id' => $store,
+			'updated_at' => $update
+			);
+		$this->db->where('id', $id);
+		$this->db->update('product', $object);
+	}
+
 }
 
 /* End of file acticity_model.php */
