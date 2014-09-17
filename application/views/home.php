@@ -51,7 +51,7 @@
 		</section>
 		
 		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -102,14 +102,14 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary" id="addProduct">Save changes</button>
+		        <button type="button" class="btn btn-primary" data-dismiss="modal" id="addProduct">Save changes</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 
 		<!-- Delete confirmation -->
-		<div class="modal fade" id="myModalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal hide fade" id="myModalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -121,14 +121,14 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">No, I'm not sure</button>
-		        <button type="button" class="btn btn-primary" id="deleteProduct">Yep! I'm sure!</button>
+		        <button type="button" class="btn btn-primary" data-dismiss="modal" id="deleteProduct">Yep! I'm sure!</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 
 		<!-- Edit product -->
-		<div class="modal fade" id="myModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal hide fade" id="myModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -179,7 +179,7 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+		        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges">Save changes</button>
 		      </div>
 		    </div>
 		  </div>
