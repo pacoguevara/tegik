@@ -49,17 +49,17 @@ class Product extends CI_Controller {
 	public function editProduct(){
 		$id = $_POST['id_product'];
 		$name = $_POST['name_product'];
-		//$price = $_POST['price_product'];
-		//$category = $_POST['category_product'];
+		$price = $_POST['price_product'];
+		$category = $_POST['category_product'];
 		$store = $_POST['store_product'];
 		$update = date("Y-m-d H:i:s");
 
-		echo $id." ".$name;
-		//$this->load->model('product_model');
-		//$this->product_model->updateProduct($id, $name, $price, $category, $store, $update);
-		//$data = $this->product_model->getProducts();
+		//echo $id." ".$name;
+		$this->load->model('product_model');
+		$this->product_model->updateProduct($id, $name, $price, $category, $store, $update);
+		$data = $this->product_model->getProducts();
 
-		//echo json_encode($data);
+		echo json_encode($data);
 
 	}
 

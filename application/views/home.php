@@ -267,11 +267,10 @@
 
 			$('#saveChanges').click(function(){
 				var idProduct = $(this).attr("idProduct");
-				var name = $('editName').val();
-				var price = $('editPrice').val();
-				var category_id = $('editCategory').val();
-				var store_id = $('editStore').val();
-
+				var name = $('#editName').val();
+				var price = $('#editPrice').val();
+				var category_id = $('#editCategory').val();
+				var store_id = $('#editStore').val();
 				$.post("<?php echo base_url();?>/index.php/product/editProduct/", {id_product: idProduct, name_product: name, price_product: price, category_product: category_id, store_product: store_id})
 				.done(function(data) {
 					data = JSON.parse(data);
