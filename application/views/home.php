@@ -242,7 +242,7 @@
 				    			<td>'+data[i].store_name+'</td>\
 				    			<td>'+data[i].created_at+'</td>\
 				    			<td>'+data[i].updated_at+'</td>\
-				    			<td><td><button class="btn btn-info editButton" data-toggle="modal" idProduct="'+data[i].id+'" data-target="#myModalEdit">Edit</button>\
+				    			<td><button class="btn btn-info editButton" data-toggle="modal" idProduct="'+data[i].id+'" data-target="#myModalEdit">Edit</button>\
 				    			<button class="btn btn-danger deleteButton" data-toggle="modal" data-target="#myModalDelete" idProduct="'+data[i].id+'">Delete</button></td>\
 				    		</tr>');
 				    }
@@ -286,7 +286,7 @@
 				    			<td>'+data[i].store_name+'</td>\
 				    			<td>'+data[i].created_at+'</td>\
 				    			<td>'+data[i].updated_at+'</td>\
-				    			<td><td><button class="btn btn-info editButton" data-toggle="modal" idProduct="'+data[i].id+'" data-target="#myModalEdit">Edit</button>\
+				    			<td><button class="btn btn-info editButton" data-toggle="modal" idProduct="'+data[i].id+'" data-target="#myModalEdit">Edit</button>\
 				    			<button class="btn btn-danger deleteButton" data-toggle="modal" data-target="#myModalDelete" idProduct="'+data[i].id+'">Delete</button></td>\
 				    		</tr>');
 				    }
